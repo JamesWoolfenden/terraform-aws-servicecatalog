@@ -17,9 +17,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-This is just a very basic example.
-
-![alt text](./diagram/api.png)
+This module creates a catalog and supporting users.
 
 Include **module.catalog.tf** this repository as a module in your existing terraform code:
 
@@ -35,8 +33,8 @@ module "catalog" {
 Service catalog resources are not all supported in TF (03/02/2021).
 To complete the addition of a product in a service catalog:
 
-- upload a product inside the catalog
-- add that product to portfolio
+- Upload a product inside the catalog
+- Add that product to portfolio
 - Add bridgecrew integration to Portfolio
 - On the portfolio details page, choose the Constraints tab, and then choose Create constraint.
 - For Product, choose Bridgecrew integration, and for Constraint type, choose Launch. Choose Continue.
