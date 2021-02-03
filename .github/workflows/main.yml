@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: main
+          token: ${{ github.token }}
       - uses: hashicorp/setup-terraform@master
         with:
           terraform_version: 0.14.5
@@ -30,6 +31,7 @@ jobs:
           framework: terraform
   version:
     name: versioning
+    if: ${{ !env.ACT }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
