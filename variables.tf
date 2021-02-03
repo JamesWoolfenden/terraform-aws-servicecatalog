@@ -21,5 +21,5 @@ variable "portfolio" {
 
 
 variable "constraint_role" {
-  default = "Bridgecrew-installer"
+  default = "bridgecrew_installer"
 }

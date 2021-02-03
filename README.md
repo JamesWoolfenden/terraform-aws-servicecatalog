@@ -62,7 +62,7 @@ No requirements.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | common\_tags | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| constraint\_role | n/a | `string` | `"Bridgecrew-installer"` | no |
+| constraint\_role | n/a | `string` | `"bridgecrew_installer"` | no |
 | maintainers | n/a | `string` | `"bridgecrew_catalog_maintainers"` | no |
 | portfolio | n/a | `map` | <pre>{<br>  "description": "List of my organizations apps",<br>  "name": "My App Portfolio",<br>  "provider_name": "James"<br>}</pre> | no |
 | readers | n/a | `string` | `"bridgecrew_catalog_readers"` | no |
@@ -93,7 +93,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2021 James Woolfenden
 
 ## License
 
