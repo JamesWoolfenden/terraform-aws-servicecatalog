@@ -30,7 +30,7 @@ module "catalog" {
 
 ## ToDo
 
-Service catalog resources are not all supported in TF (03/02/2021).
+Service catalog resources are not all supported in TF (03/02/2021-2022).
 To complete the addition of a product in a service catalog:
 
 - Upload a product inside the catalog
@@ -47,15 +47,16 @@ To complete the addition of a product in a service catalog:
   Choose Add Access.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
@@ -63,33 +64,34 @@ No modules.
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_iam_group.catalog_admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
-| [aws_iam_group.catalog_maintainer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
-| [aws_iam_group.catalog_readers](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
-| [aws_iam_group_policy_attachment.full](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment) | resource |
-| [aws_iam_group_policy_attachment.maintainer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment) | resource |
-| [aws_iam_group_policy_attachment.readers](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment) | resource |
+| Name                                                                                                                                                             | Type     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| [aws_iam_group.catalog_admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group)                                             | resource |
+| [aws_iam_group.catalog_maintainer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group)                                        | resource |
+| [aws_iam_group.catalog_readers](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group)                                           | resource |
+| [aws_iam_group_policy_attachment.full](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment)                  | resource |
+| [aws_iam_group_policy_attachment.maintainer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment)            | resource |
+| [aws_iam_group_policy_attachment.readers](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment)               | resource |
 | [aws_iam_group_policy_attachment.service-catalog-admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment) | resource |
-| [aws_iam_policy.admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
-| [aws_iam_role.constraint](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy.constraint](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
-| [aws_servicecatalog_portfolio.portfolio](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/servicecatalog_portfolio) | resource |
+| [aws_iam_policy.admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy)                                                   | resource |
+| [aws_iam_role.constraint](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                                  | resource |
+| [aws_iam_role_policy.constraint](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                                    | resource |
+| [aws_servicecatalog_portfolio.portfolio](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/servicecatalog_portfolio)                   | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
-| <a name="input_constraint_role"></a> [constraint\_role](#input\_constraint\_role) | n/a | `string` | `"bridgecrew_installer"` | no |
-| <a name="input_maintainers"></a> [maintainers](#input\_maintainers) | n/a | `string` | `"bridgecrew_catalog_maintainers"` | no |
-| <a name="input_portfolio"></a> [portfolio](#input\_portfolio) | n/a | `map` | <pre>{<br>  "description": "List of my organizations apps",<br>  "name": "My App Portfolio",<br>  "provider_name": "James"<br>}</pre> | no |
-| <a name="input_readers"></a> [readers](#input\_readers) | n/a | `string` | `"bridgecrew_catalog_readers"` | no |
+| Name                                                                           | Description                                        | Type       | Default                                                                                                                            | Required |
+| ------------------------------------------------------------------------------ | -------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | :------: |
+| <a name="input_common_tags"></a> [common_tags](#input_common_tags)             | This is to help you add tags to your cloud objects | `map(any)` | n/a                                                                                                                                |   yes    |
+| <a name="input_constraint_role"></a> [constraint_role](#input_constraint_role) | n/a                                                | `string`   | `"bridgecrew_installer"`                                                                                                           |    no    |
+| <a name="input_maintainers"></a> [maintainers](#input_maintainers)             | n/a                                                | `string`   | `"bridgecrew_catalog_maintainers"`                                                                                                 |    no    |
+| <a name="input_portfolio"></a> [portfolio](#input_portfolio)                   | n/a                                                | `map`      | <pre>{<br> "description": "List of my organizations apps",<br> "name": "My App Portfolio",<br> "provider_name": "James"<br>}</pre> |    no    |
+| <a name="input_readers"></a> [readers](#input_readers)                         | n/a                                                | `string`   | `"bridgecrew_catalog_readers"`                                                                                                     |    no    |
 
 ## Outputs
 
 No outputs.
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -112,7 +114,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2021 James Woolfenden
+Copyright © 2021-2022 James Woolfenden
 
 ## License
 
