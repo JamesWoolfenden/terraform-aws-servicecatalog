@@ -133,7 +133,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListRolePolicies",
                 "iam:PutRolePolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -144,7 +146,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "servicecatalog:DescribePortfolio",
                 "servicecatalog:UpdatePortfolio"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
