@@ -13,6 +13,9 @@ resource "aws_iam_group_policy_attachment" "service-catalog-admin" {
 }
 
 resource "aws_iam_policy" "admin" {
+  # checkov:skip=CKV_AWS_286: service catalog admin requires IAM management permissions
+  # checkov:skip=CKV_AWS_287: service catalog admin requires IAM management permissions
+  # checkov:skip=CKV_AWS_289: service catalog admin requires IAM management permissions
   # checkov:skip=CKV_AWS_290: IAM policy requires broad write access for this module to function
   # checkov:skip=CKV_AWS_355: IAM policy requires wildcard resource for this module to function
   name   = "service-catalog-admin"

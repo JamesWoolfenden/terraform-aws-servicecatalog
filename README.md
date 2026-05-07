@@ -1,13 +1,11 @@
 # terraform-aws-servicecatalog
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-servicecatalog/workflows/Verify%20and%20Bump/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-servicecatalog)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-servicecatalog/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-servicecatalog)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-servicecatalog.svg)](https://github.com/JamesWoolfenden/terraform-aws-servicecatalog/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-servicecatalog.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-servicecatalog/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-servicecatalog/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-servicecatalog&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-servicecatalog/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-servicecatalog&benchmark=INFRASTRUCTURE+SECURITY)
 
 Terraform module -
 
@@ -54,7 +52,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
@@ -64,7 +62,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_group.catalog_admin](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group.catalog_maintainer](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group.catalog_readers](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
@@ -80,11 +78,11 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 | <a name="input_constraint_role"></a> [constraint\_role](#input\_constraint\_role) | n/a | `string` | `"bridgecrew_installer"` | no |
 | <a name="input_maintainers"></a> [maintainers](#input\_maintainers) | n/a | `string` | `"bridgecrew_catalog_maintainers"` | no |
-| <a name="input_portfolio"></a> [portfolio](#input\_portfolio) | n/a | `map` | <pre>{<br>  "description": "List of my organizations apps",<br>  "name": "My App Portfolio",<br>  "provider_name": "James"<br>}</pre> | no |
+| <a name="input_portfolio"></a> [portfolio](#input\_portfolio) | n/a | `map` | <pre>{<br/>  "description": "List of my organizations apps",<br/>  "name": "My App Portfolio",<br/>  "provider_name": "James"<br/>}</pre> | no |
 | <a name="input_readers"></a> [readers](#input\_readers) | n/a | `string` | `"bridgecrew_catalog_readers"` | no |
 
 ## Outputs
